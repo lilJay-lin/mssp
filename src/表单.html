@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>表单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/plugin.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+
+    <script src="js/ie/html5.js"></script>
+
+    <![endif]-->
+</head>
+<body>
+<section class="main padder">
+    <section class="panel">
+        <form class="form-horizontal" method="get">
+            <div class="form-group">
+                <label class="control-label">活动名称</label>
+                <div class="control-field">
+                    <input type="text" name="text" placeholder="活动名称" class=" input-small form-control">
+                </div>
+                <label class="control-label">Account</label>
+                <div class="control-field">
+                    <select name="account" class="input-small form-control">
+                        <option value="1">Editor</option>
+                        <option value="0">Admin</option>
+                    </select>
+                </div>
+                <div class="btn-groups">
+                    <a href="#" class="btn btn-small btn-info">查询</a>
+                    <a href="#" class="btn btn-small btn-info">导出</a>
+                    <a href="#" class="btn btn-small btn-info">重置</a>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Account</label>
+                <div class="control-field">
+                    <select name="account" class="input-small form-control">
+                        <option value="1">Editor</option>
+                        <option value="0">Admin</option>
+                    </select>
+                </div>
+                <label class="control-label">时间</label>
+                <div class="control-field">
+                    <input class="input-small form-control datepicker" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy">
+                </div>
+                <div class="help-float">至</div>
+                <div class="control-field">
+                    <input class="input-small form-control datepicker" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy">
+                </div>
+                <div class="help-float red">只提供三十天以内的书查询</div>
+            </div>
+            <div class="form-group">
+                <a href="#" class="btn btn-small btn-info">查询</a>
+                <a href="#" class="btn btn-small btn-info">导出</a>
+            </div>
+        </form>
+    </section>
+    <!--
+        表单校验，添加
+         http://parsleyjs.org/doc/examples.html
+         1. form 添加 data-parsley-validate
+         2. 需要校验的输入框上添加校验类型
+            1. 校验类型：
+            直接写在输入框上type="email"
+            type: {
+                email: "This value should be a valid email.",
+                url: "This value should be a valid url.",
+                number: "This value should be a valid number.",
+                integer: "This value should be a valid integer.",
+                digits: "This value should be digits.",
+                alphanum: "This value should be alphanumeric."
+            },
+            下面集中写在页面上的格式是：data-parsley-类型 = ''
+            notblank: "This value should not be blank.",
+            required: "This value is required.",
+            pattern: "This value seems to be invalid.",
+            min: "This value should be greater than or equal to %s.",
+            max: "This value should be lower than or equal to %s.",
+            range: "This value should be between %s and %s.",
+            minlength: "This value is too short. It should have %s characters or more.",
+            maxlength: "This value is too long. It should have %s characters or fewer.",
+            length: "This value length is invalid. It should be between %s and %s characters long.",
+            mincheck: "You must select at least %s choices.",
+            maxcheck: "You must select %s choices or fewer.",
+            check: "You must select between %s and %s choices.",
+            equalto: "This value should be the same."
+            2. 校验信息
+            data-parsley-类型-message= "" //校验提示信息
+            3.校验时机,不输入默认change会检查
+            data-parsley-trigger="change"//change keyup...
+    -->
+    <section class="panel">
+        <form class="form-horizontal" method="get" data-parsley-validate id="validateDemo">
+            <div class="form-group">
+                <label class="control-label">活动名称</label>
+                <div class="control-field">
+                    <input type="email" name="text" placeholder="活动名称"  class="input-small form-control"
+                           required
+                           data-parsley-minlength="2"
+                           data-parsley-minlength-message="名称最少输入两位"
+                            >
+                    <div class="help-inline red">名称最少输入两位</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">奖品类型</label>
+                <div class="control-radio-group award_type">
+                    <div class="radio">
+                        <label class="radio-custom">
+                            <input type="radio" name="radio">
+                            <i class="icon-circle-blank"></i>
+                            Item one checked
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label class="radio-custom">
+                            <input type="radio" name="radio" >
+                            <i class="icon-circle-blank"></i>
+                            Item2
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label class="radio-custom">
+                            <input type="radio" name="radio">
+                            <i class="icon-circle-blank"></i>
+                            Item3
+                        </label>
+                    </div>
+                    <div class="help-inline red">奖品类型</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">奖品类型</label>
+                <div class="control-radio-group">
+                    <div class="checkbox">
+                        <label class="checkbox-custom">
+                            <input type="checkbox" name="checkbox" >
+                            <i class="icon-unchecked"></i>
+                            Item1
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkbox-custom">
+                            <input type="checkbox" name="checkbox" >
+                            <i class="icon-unchecked"></i>
+                            Item2
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkbox-custom">
+                            <input type="checkbox" name="checkbox" >
+                            <i class="icon-unchecked"></i>
+                            Item3
+                        </label>
+                    </div>
+                    <div class="help-inline red">奖品类型</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">来源</label>
+                <div class="control-field">
+                    <input type="text" name="text" placeholder="来源" class=" input-small form-control parsley-validated" data-required="true" data-type="email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">奖品描述</label>
+                <div class="control-field">
+                    <textarea placeholder="Profile" rows="5" class="form-control parsley-validated" data-trigger="keyup" data-rangelength="[20,200]"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-small btn-info">提交</button>
+            </div>
+        </form>
+    </section>
+</section>
+</body>
+
+<!-- / footer -->
+
+<script src="js/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+
+<script src="js/bootstrap.js"></script>
+
+<!-- fuelux -->
+
+<script src="js/fuelux/fuelux.js"></script>
+
+<!-- datepicker -->
+
+<script src="js/datepicker/bootstrap-datepicker.js"></script>
+
+<!-- file input -->
+
+<script src="js/file-input/bootstrap.file-input.js"></script>
+
+<!-- parsley -->
+
+<script src="js/parsley/parsley.min.js"></script>
+<script src="js/parsley/zh_cn.js"></script>
+
+<script>
+    $(function(){
+        /*日历实例化*/
+        $(".datepicker").each(function(){ $(this).datepicker();});
+
+
+        /*表单校验,提交数据*/
+        $('#validateDemo').parsley()
+        .on('form:submit', function(){//校验通过
+            return false; //不写刷新页面
+        })
+    })
+</script>
+</html>

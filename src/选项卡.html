@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/plugin.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title></title>
+</head>
+<body>
+<section class="main padder">
+    <section class="panel">
+
+        <div class="wizard clearfix m-b" id="form-wizard">
+
+            <ul class="steps">
+
+                <li data-target="#step1" class="active"><span class="badge badge-info">1</span>Step 1</li>
+
+                <li data-target="#step2"><span class="badge">2</span>Step 2</li>
+
+                <li data-target="#step3"><span class="badge">3</span>Step 3</li>
+
+            </ul>
+
+        </div>
+
+        <div class="step-content">
+            <form>
+
+                <div class="step-pane active" id="step1">
+
+                    <p>Your website:</p>
+
+                    <input type="text" class="input-small form-control" data-trigger="change" data-required="true" data-type="url" placeholder="website">
+
+                </div>
+
+                <div class="step-pane" id="step2">
+
+                    <p>Your email:</p>
+
+                    <input type="text" class="input-small form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
+
+                </div>
+
+                <div class="step-pane" id="step3">This is step 3</div>
+
+            </form>
+            <div class="actions m-t">
+
+                <button type="button" class="btn btn-white btn-small btn-prev" data-target="#form-wizard" data-wizard="previous" disabled="disabled">Prev</button>
+
+                <button type="button" class="btn btn-white btn-small btn-next" data-target="#form-wizard" data-wizard="next" data-last="Finish">Next</button>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="panel">
+
+        <header class="panel-heading">
+
+            <ul class="nav nav-tabs nav-justified">
+
+                <li class=""><a href="#home" data-toggle="tab">Home</a></li>
+
+                <li class=""><a href="#profile" data-toggle="tab">Profile</a></li>
+
+                <li class=""><a href="#messages" data-toggle="tab">Messages</a></li>
+
+                <li class="active"><a href="#settings" data-toggle="tab">Settings</a></li>
+
+            </ul>
+
+        </header>
+
+        <div class="tab-content">
+
+            <div class="tab-pane" id="home">home</div>
+
+            <div class="tab-pane" id="profile">profile</div>
+
+            <div class="tab-pane" id="messages">message</div>
+
+            <div class="tab-pane active" id="settings">settings</div>
+
+        </div>
+
+    </section>
+
+</section>
+</body>
+
+<!-- / footer -->
+
+<script src="js/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+
+<script src="js/bootstrap.js"></script>
+
+<!-- fuelux -->
+
+<script src="js/fuelux/fuelux.js"></script>
+
+<!-- parsley -->
+
+<script src="js/parsley/parsley.min.js"></script>
+<script src="js/parsley/zh_cn.js"></script>
+<script>
+    $(function(){
+        /*分步骤面板*/
+        // wizard
+        $(document).on('click', '[data-wizard]', function (e) {
+            var $this   = $(this), href;
+            var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, ''));
+            var option = $this.data('wizard');
+            var item = $target.wizard('selectedItem');
+            var $step = $(this).closest('.step-content').find('.step-pane:eq(' + (item.step-1) + ')');
+            /*校验判断是否能进行下一步*/
+            if( $step.find('input, select, textarea').data('required') && !$step.find('input, select, textarea').parsley( 'validate' ) ){
+                return false;
+            }else{/*执行上or下一步*/
+                $target.wizard(option);
+                var activeStep = (option=="next") ? (item.step+1) : (item.step-1);
+                var prev = ($(this).hasClass('btn-prev') && $(this)) || $(this).prev();
+                prev.attr('disabled', (activeStep == 1) ? true : false);
+            }
+        });
+    })
+</script>
+</html>
