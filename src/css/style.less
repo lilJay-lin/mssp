@@ -1576,6 +1576,9 @@ textarea {
 /*
   表格
 */
+.padder{
+  padding: 18px 28px 0;
+}
 .table-wrapper .table-bordered > thead > tr > th:first-child,
 .table-wrapper .table-bordered > tbody > tr > th:first-child,
 .table-wrapper .table-bordered > tfoot > tr > th:first-child,
@@ -1640,11 +1643,11 @@ textarea {
   float: left;
 }
 /*表单输入，设置宽度*/
-.control-field input, textarea, select {
-  display: inline-block;
-}
-.control-field input, select{
-  width: 180px;
+.control-field{
+  input, select, textarea.form-control{
+    display: inline-block;
+    width: 180px;
+  }
 }
 .control-radio-group{
   float: left;
