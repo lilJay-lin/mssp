@@ -33,7 +33,7 @@ var config = {
     dist:{
         css: dist + '/css',
         js: dist + '/js',
-        img: dist + '/img',
+        img: dist + '/images',
         html: dist,
         font: dist + '/font',
         vendor: dist
