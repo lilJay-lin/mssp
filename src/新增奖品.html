@@ -29,7 +29,7 @@
             </ul>
         </div>
     </aside>
-    <header class="top-nav">
+    <header class="main-top-nav">
         <div class="nav-menu">
             <div class="top-nav-logo">
                 <img src="images/f_1.png" alt="MM营销平台" class="logo">
@@ -51,30 +51,28 @@
         </div>
     </header>
     <aside class="right-content">
+        <div class="top-nav border padder">
+            <span class="nav-item">奖品管理</span>
+            <i class="icon-angle-right"></i>
+            <span class="nav-item">奖品池管理</span>
+            <i class="icon-angle-right"></i>
+            <span class="nav-item">新增奖品</span>
+        </div>
         <section class="main padder">
+            <section class="nav-control-btns align-right">
+                <a href="" class="btn btn-default">返回</a>
+            </section>
             <section class="panel">
                 <form class="form-horizontal" method="get">
                     <div class="form-group">
-                        <label class="control-label">奖品名称：</label>
+                        <label class="control-label"><span class="control-label-required">*</span>奖品名称：</label>
                         <div class="control-field">
                             <input type="email" name="text" placeholder="奖品名称   "  class="input-small form-control">
                             <div class="help-inline red">(1-30个字符组成)</div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label">奖品类型：</label>
-                        <div class="control-radio-group">
-                            <div class="radio">
-                                <label class="radio-custom">
-                                    <input type="radio" name="radio" data-parsley-multiple="radio">
-                                    <i class="icon-circle-blank"></i>
-                                    sdfsfs
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">奖品类型</label>
+                        <label class="control-label"><span class="control-label-required">*</span>奖品类型</label>
                         <div class="control-radio-group award_type">
                             <div class="radio">
                                 <label class="radio-custom">
@@ -94,14 +92,14 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label">来源：</label>
+                        <label class="control-label"><span class="control-label-required">*</span>来源：</label>
                         <div class="control-field">
                             <input type="text" name="text" placeholder="来源" class=" input-small form-control">
                             <div class="help-inline red">(1-30个字符组成)</div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label">总数量：</label>
+                        <label class="control-label"><span class="control-label-required">*</span>总数量：</label>
                         <div class="control-field">
                             <input type="text" name="text" placeholder="总数量" class=" input-small form-control">
                             <div class="help-inline red"></div>
@@ -114,7 +112,7 @@
                             <div class="help-inline red">(不超过200个字符)</div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-operation-btns">
                         <button type="submit" class="btn btn-small btn-info">保存</button>
                         <button type="button" class="btn btn-small btn-info">取消</button>
                     </div>
@@ -124,6 +122,7 @@
     </aside>
 </div>
 </body>
+
 <!-- / footer -->
 
 <script src="js/jquery.min.js"></script>
@@ -135,5 +134,23 @@
 <!-- fuelux -->
 
 <script src="js/fuelux/fuelux.js"></script>
-<script src="js/main.js"></script>
+
+<!-- datepicker -->
+
+<script src="js/datepicker/bootstrap-datepicker.js"></script>
+
+<!-- file input -->
+<script src="js/file-input/bootstrap.file-input.js"></script>
+
+<!-- Bootstrap -->
+
+<script src="js/bootstrap.js"></script>
+
+<!-- app -->
+
+<script src="js/app.js"></script>
+
+<script src="js/app.plugin.js"></script>
+
+<script src="js/app.data.js"></script>
 </html>

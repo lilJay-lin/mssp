@@ -71,6 +71,7 @@ $(function(){
     function Slider(el, data){
         this.$el = $(el);
         this.data = data || [];
+        this.curSk = '';
         this.init();
     }
     Slider.prototype = {
@@ -121,7 +122,7 @@ $(function(){
                 match = skReg.exec(location.search),
                     sk = '',
                 $els = null;
-            if(match.length > 0 ){
+            if(match && match.length > 0 ){
                 sk = (match[1]|| '').trim();
                 if(sk){
                     $els = me.$el.find('li[data-sk="' + sk + '"]');
@@ -129,7 +130,7 @@ $(function(){
                         me.$el.find('li').removeClass('active');
                         $els.addClass('active');
                     }
-
+                    this.curSk = sk;
                 }
             }
         },
@@ -154,6 +155,9 @@ $(function(){
                 html += util.compile(me.parentTpl, {name: obj.name, child: str});
             });
             me.$el.html(html)
+        },
+        geCurrent: function(){
+            return this.curSk
         }
     }
     var slider = new Slider('.js-slider-container', [
@@ -186,8 +190,8 @@ $(function(){
                     href: './奖品池管理.html'
                 },
                 {
-                    name: '活动奖池信息查询',
-                    href: './活动奖池信息查询.html'
+                    name: '活动奖池监控',
+                    href: './活动奖池监控.html'
                 },
                 {
                     name: '奖品池录入明细',

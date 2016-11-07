@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>页面框架布局</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/plugin.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/frame.css">
+</head>
+<body>
+<div class="main-container">
+    <aside class="left-slider">
+        <div class="slider-view">
+            <ul class="js-slider-container">
+            </ul>
+        </div>
+    </aside>
+    <header class="main-top-nav">
+        <div class="nav-menu">
+            <div class="top-nav-logo">
+                <img src="images/f_1.png" alt="MM营销平台" class="logo">
+                MM后台管理
+            </div>
+            <ul class="nav">
+                <li>
+                    <div>
+                        <img src="images/f_2.png" alt="" class="img-user">@john
+                    </div>
+                </li>
+                <li>
+                    <a class="btn btn-small btn-white">登录</a>
+                </li>
+                <li>
+                    <a class="btn btn-small btn-white">安全退出</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <aside class="right-content">
+        <div class="top-nav border padder">
+            <span class="nav-item">活动管理</span>
+            <i class="icon-angle-right"></i>
+            <span class="nav-item">活动列表</span>
+        </div>
+
+        <section class="main padder">
+            <section class="nav-control-btns">
+                <a href="" class="btn btn-primary">创建活动</a>
+            </section>
+            <section class="panel">
+                <form class="form-horizontal nobottom"  method="get">
+                    <div class="form-group">
+                        <label class="control-label">活动名称 :</label>
+                        <div class="control-field">
+                            <select name="" class="input-small form-control">
+                                <option value="">请选择</option>
+                            </select>
+                        </div>
+                        <label class="control-label ">活动ID :</label>
+                        <div class="control-field">
+                            <input class="input-small form-control" size="16" type="text" >
+                        </div>
+                        <label class="control-label ">活动类型 :</label>
+                        <div class="control-field">
+                            <select name="" class="input-small form-control">
+                                <option value="">请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">活动开始时间 :</label>
+                        <div class="control-field">
+                            <input class="input-small form-control datepicker datepicker2" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy">
+                        </div>
+                        <label class="control-label ">活动结束时间 :</label>
+                        <div class="control-field">
+                            <input class="input-small form-control datepicker datepicker2" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy">
+                        </div>
+                        <label class="control-label ">活动状态 :</label>
+                        <div class="control-field">
+                            <select name="" class="input-small form-control">
+                                <option value="">请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn-groups block">
+                        <a href="#" class="btn btn-small btn-info">查询</a>
+                        <a href="#" class="btn btn-small btn-info">导出</a>
+                        <a href="#" class="btn btn-small btn-info btn-reset">重置</a>
+                    </div>
+                </form>
+            </section>
+
+            <div class="top-nav">
+                活动列表
+            </div>
+            <!--<div class="show-search-tip">
+                请输入您的查询信息！
+            </div>-->
+            <section class="table-wrapper">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>活动ID</th>
+                        <th>活动名称</th>
+                        <th>活动开始时间</th>
+                        <th>活动结束时间</th>
+                        <th>活动状态</th>
+                        <th>活动类型</th>
+                        <th>活动策划人</th>
+                        <th>更新时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2016090121</td>
+                        <td>
+                            <div class="table-activity-name">
+                                Table cellTable cellTable cellTable cellTable cell
+                            </div>
+                        </td>
+                        <td>2016-09-11 12:23:00</td>
+                        <td>2016-09-11 12:23:00</td>
+                        <td class="pause">暂停</td>
+                        <td>下载抽奖</td>
+                        <td>John</td>
+                        <td>2016-09-12</td>
+                        <td class="table-operation-td">
+                            <a href="javascript:void(0);" title="编辑"><i class="icon-edit"></i></a>
+                            <a href="javascript:void(0);" title="删除"><i class="icon-trash"></i></a>
+                            <a href="javascript:void(0);"><i class="icon-play-circle"></i></a>
+                            <a href="javascript:void(0);"><i class="icon-expand-alt"></i></a>
+                            <a href="javascript:void(0);"><i class="icon-bar-chart"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2016090121</td>
+                        <td>
+                            <div class="table-activity-name">
+                                下载抽奖活动
+                            </div>
+                        </td>
+                        <td>2016-09-11 12:23:00</td>
+                        <td>2016-09-11 12:23:00</td>
+                        <td class="playing">进行中</td>
+                        <td>下载抽奖</td>
+                        <td>John</td>
+                        <td>2016-09-12</td>
+                        <td class="table-operation-td">
+                            <a href="javascript:void(0);" title="编辑"><i class="icon-edit"></i></a>
+                            <a href="javascript:void(0);" title="删除"><i class="icon-trash"></i></a>
+                            <a href="javascript:void(0);"><i class="icon-pause"></i></a>
+                            <a href="javascript:void(0);"><i class="icon-expand-alt"></i></a>
+                            <a href="javascript:void(0);"><i class="icon-bar-chart"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2016090121</td>
+                        <td>
+                            <div class="table-activity-name">
+                                下载抽奖活动
+                            </div>
+                        </td>
+                        <td>2016-09-11 12:23:00</td>
+                        <td>2016-09-11 12:23:00</td>
+                        <td>未开始</td>
+                        <td>下载抽奖</td>
+                        <td>John</td>
+                        <td>2016-09-12</td>
+                        <td class="table-operation-td">
+                            <a href="javascript:void(0);" title="编辑"><i class="icon-edit"></i></a>
+                            <a href="javascript:void(0);" title="删除"><i class="icon-trash"></i></a>
+                            <a href="javascript:void(0);" title="暂停"><i class="icon-pause"></i></a>
+                            <a href="javascript:void(0);" title="复用"><i class="icon-expand-alt"></i></a>
+                            <a href="javascript:void(0);" title="数据监控"><i class="icon-bar-chart"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2016090121</td>
+                        <td>
+                            <div class="table-activity-name">
+                                下载抽奖活动
+                            </div>
+                        </td>
+                        <td>2016-09-11 12:23:00</td>
+                        <td>2016-09-11 12:23:00</td>
+                        <td>未开始</td>
+                        <td>下载抽奖</td>
+                        <td>John</td>
+                        <td>2016-09-12</td>
+                        <td class="table-operation-td">
+                            <a href="javascript:void(0);" title="编辑"><i class="icon-edit"></i></a>
+                            <a href="javascript:void(0);" title="删除"><i class="icon-trash"></i></a>
+                            <a href="javascript:void(0);" title="进行中"><i class="icon-play-circle"></i></a>
+                            <a href="javascript:void(0);" title="复用"><i class="icon-expand-alt"></i></a>
+                            <a href="javascript:void(0);" title="数据监控"><i class="icon-bar-chart"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2016090121</td>
+                        <td>
+                            <div class="table-activity-name">
+                                Table cellTable cellTable cellTable cellTable cell
+                            </div>
+                        </td>
+                        <td>2016-09-11 12:23:00</td>
+                        <td>2016-09-11 12:23:00</td>
+                        <td>未开始</td>
+                        <td>下载抽奖</td>
+                        <td>John</td>
+                        <td>2016-09-12</td>
+                        <td class="table-operation-td">
+                            <a href="javascript:void(0);" title="编辑" class="disabled"><i class="icon-edit"></i></a>
+                            <a href="javascript:void(0);" title="删除"><i class="icon-trash"></i></a>
+                            <a href="javascript:void(0);" class="pause" title="暂停"><i class="icon-pause"></i></a>
+                            <a href="javascript:void(0);" title="复用"><i class="icon-expand-alt"></i></a>
+                            <a href="javascript:void(0);" title="数据监控"><i class="icon-bar-chart"></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <div class="pagination-wrapper">
+                <div class="pagination">
+                    <a href="" class="btn btn-small btn-white disabled"><i class="icon-angle-left"></i>上一页</a>
+                    <a href="" class="btn btn-small btn-white">下一页<i class="icon-angle-right"></i></a>
+                    <span>第1页/共10页</span>
+                </div>
+            </div>
+        </section>
+    </aside>
+</div>
+</body>
+
+<!-- / footer -->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Bootstrap -->
+
+<script src="js/bootstrap.js"></script>
+
+<!-- fuelux -->
+
+<script src="js/fuelux/fuelux.js"></script>
+
+<!-- datepicker -->
+
+<script src="js/datepicker/bootstrap-datepicker.js"></script>
+
+<!-- file input -->
+
+<script src="js/file-input/bootstrap.file-input.js"></script>
+
+<!-- Bootstrap -->
+
+<script src="js/bootstrap.js"></script>
+
+<!-- app -->
+
+<script src="js/app.js"></script>
+
+<script src="js/app.plugin.js"></script>
+
+<script src="js/app.data.js"></script>
+</html>
