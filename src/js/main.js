@@ -1,9 +1,9 @@
 /**
  * Created by linxiaojie on 2016/11/4.
  */
-$(function(){
+$(function () {
     /*util*/
-    var util = (function(){
+    var util = (function () {
         var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
         /*
          * 渲染，
@@ -31,16 +31,16 @@ $(function(){
         }
 
         /*不处理多重内嵌的数组，只处理一元数组*/
-        function renderArray(template, arr){
-            if(arr == null || !$.isArray(arr)){
+        function renderArray(template, arr) {
+            if (arr == null || !$.isArray(arr)) {
                 return template;
             }
             var html = '', obj = {};
-            $.each(arr, function(i){
-                if(toString.call(arr[i]) == '[object Object]'){
+            $.each(arr, function (i) {
+                if (toString.call(arr[i]) == '[object Object]') {
                     obj = arr[i];
                     obj._order = i + 1;
-                }else{
+                } else {
                     obj.value = arr[i];
                     obj._order = i + 1;
                 }
@@ -48,12 +48,13 @@ $(function(){
             })
             return html;
         }
+
         return {
-            compile: function(template, data){
+            compile: function (template, data) {
                 var html = ''
-                if($.isArray(data)){
+                if ($.isArray(data)) {
                     html = renderArray(template, data)
-                }else{
+                } else {
                     html = render(template, data)
                 }
                 return html;
@@ -68,47 +69,53 @@ $(function(){
     })
 
     /*侧边栏*/
-    function Slider(el, data){
+    var storage = null;
+    if (window.localStorage){
+        storage = window.localStorage
+    }
+    function Slider(el, data) {
         this.$el = $(el);
         this.data = data || [];
         this.curSk = '';
+        this.cacheSk = '__cache_sk__';
         this.init();
     }
+
     Slider.prototype = {
         parentTpl: '<li class="submenu open"><a href="#" class="js-menu"><i class="icon icon-th-list"></i> <span>{name}</span></a><ul>{child}</ul></li>',
         childTpl: '<li data-sk="{sk}"><a href="{href}">{name}</a></li>',
-        init: function(){
+        init: function () {
             var me = this;
-            if(!me.$el || me.$el.length == 0 || !$.isArray(me.data)){
+            if (!me.$el || me.$el.length == 0 || !$.isArray(me.data)) {
                 return;
             }
             me._render();
             me._bindEvent();
             me._checkSelected();
         },
-        _bindEvent: function(){
-            this.$el.delegate('.js-menu', 'click', function(e){
+        _bindEvent: function () {
+            this.$el.delegate('.js-menu', 'click', function (e) {
                 var $el = $(this).closest('.submenu');
                 $el.toggleClass('open')
             })
         },
-        goTo: function(toName, qstr){
+        goTo: function (toName, qstr) {
             var me = this;
-            $.each(me.data, function(i){
-                var $els = null, obj = this,name = '', str = '', child = obj.child, href = '';
+            $.each(me.data, function (i) {
+                var $els = null, obj = this, name = '', str = '', child = obj.child, href = '';
                 var key = 'p_' + i + '_c_', tKey = '';
-                if($.isArray(child)){
-                    $.each(child, function(j){
+                if ($.isArray(child)) {
+                    $.each(child, function (j) {
                         name = this.name;
-                        if (toName == name){
+                        if (toName == name) {
                             tKey = key + j;
                             return false;
                         }
                     })
                 }
-                if(tKey != ''){
+                if (tKey != '') {
                     $els = me.$el.find('li[data-sk="' + tKey + '"]');
-                    if($els.length > 0){
+                    if ($els.length > 0) {
                         href = $els.find('a').eq(0).attr('href') + (typeof qstr == 'undefined' ? '' : qstr);
                         window.location.href = href;
                     }
@@ -116,34 +123,41 @@ $(function(){
                 }
             })
         },
-        _checkSelected: function(){
+        _checkSelected: function () {
             var me = this,
                 skReg = /[&\s\?]sk=([^&\s\?]*)/;
-                match = skReg.exec(location.search),
-                    sk = '',
+            match = skReg.exec(location.search),
+                sk = '',
                 $els = null;
-            if(match && match.length > 0 ){
-                sk = (match[1]|| '').trim();
-                if(sk){
-                    $els = me.$el.find('li[data-sk="' + sk + '"]');
-                    if($els.length > 0){
-                        me.$el.find('li').removeClass('active');
-                        $els.addClass('active');
-                    }
-                    this.curSk = sk;
+            if (match && match.length > 0) {
+                sk = (match[1] || '').trim();
+            } else if(me.curSk){
+                sk = me.curSk
+            } else if(localStorage){
+                sk = localStorage.getItem(me.cacheSk, sk);
+            }
+            if (sk) {
+                $els = me.$el.find('li[data-sk="' + sk + '"]');
+                if ($els.length > 0) {
+                    me.$el.find('li').removeClass('active');
+                    $els.addClass('active');
+                }
+                this.curSk = sk;
+                if(storage){
+                    storage.setItem(me.cacheSk, sk);
                 }
             }
         },
-        _render: function(){
+        _render: function () {
             var me = this, html = '';
-            if(!me.$el || me.$el.length == 0 || !$.isArray(me.data)){
+            if (!me.$el || me.$el.length == 0 || !$.isArray(me.data)) {
                 return;
             }
-            $.each(me.data, function(i){
+            $.each(me.data, function (i) {
                 var obj = this, str = '', child = obj.child, href = '', idx = -1;
                 var key = 'p_' + i + '_c_', tKey;
-                if($.isArray(child)){
-                    $.each(child, function(j){
+                if ($.isArray(child)) {
+                    $.each(child, function (j) {
                         href = this.href;
                         idx = this.href.indexOf('?');
                         tKey = key + j;
@@ -156,10 +170,11 @@ $(function(){
             });
             me.$el.html(html)
         },
-        geCurrent: function(){
+        geCurrent: function () {
             return this.curSk
         }
     }
+
     var slider = new Slider('.js-slider-container', [
         {
             name: '活动管理',
