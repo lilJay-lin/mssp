@@ -975,6 +975,9 @@ form,
 .padder {
   padding: 0 15px;
 }
+.main.padder{
+  padding: 16px 28px;
+}
 .no-padder {
   padding: 0 !important;
 }
@@ -1578,9 +1581,6 @@ textarea {
 /*
   表格
 */
-.padder{
-  padding: 18px 28px 0;
-}
 .table-wrapper .table-bordered > thead > tr > th:first-child,
 .table-wrapper .table-bordered > tbody > tr > th:first-child,
 .table-wrapper .table-bordered > tfoot > tr > th:first-child,
@@ -1639,7 +1639,7 @@ textarea {
 .help-float, .help-inline{
   font-size: 12px;
   margin-top: 5px;
-  padding: 0 5px;
+  padding: 0 8px;
 }
 .help-float{
   float:left;
@@ -1709,7 +1709,7 @@ textarea {
 }
 
 .top-nav{
-  line-height: 34px;
+  line-height: 36px;
   &.border{
     border-bottom: solid 1px #dee4eb;
   }
@@ -1766,13 +1766,16 @@ textarea {
   border-left-color: #fff6ad;
 }
 .line-title{
-  font-size: 14px;
+  font-size: 16px;
   line-height: 30px;
+  margin-bottom: 15px;
   border-bottom: solid 1px #ebebeb;
+}
+.line-title-large{
+  margin-top: 30px;
 }
 .control-field2{
   float: none;
-  margin-top: 15px;
   margin-bottom: 15px;
 }
 .red-star, .red-tips{
@@ -1784,15 +1787,15 @@ textarea {
 .star-wrapper{
   float: left;
   line-height: 30px;
-  margin-right: 5px;
+  margin-right: 8px;
+  margin-left: 13px;
 }
-.btn-return{
-
+.btn-return.btn-default.btn-small{
   float: right;
-  margin-top: 7px;
-  margin-right: 10px;
+  margin-top: 3px;
+  margin-right: 15px;
+  padding: 5px 15px;
 }
-
 .form-group2:after{
   content: '';
   display: block;
@@ -1811,12 +1814,15 @@ textarea {
 select.input-small2{
   width: 90px;
   margin-right: 30px;
+  float: left;
 }
 
 .control-radio-group2{
   border: solid 1px #ccc;
   padding: 10px 20px;
   width: 830px;
+  float: left;
+  border-radius: 3px;
 }
 .star-wrapper2{
   line-height: 52px;
@@ -1828,6 +1834,192 @@ select.input-small2{
 .btn-info-add{
   font-size: 14px;
   padding: 4px 7px;
+  margin-left: 390px;
+}
+.black-list{
+  float: left;
+  font-size: 14px;
+  line-height: 33px;
+}
+.clear-fixed:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.radio-float{
+  float: left;
+}
+.radio-custom-block{
+  display: block !important;
+}
+.radio-float{
+  margin: 0;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+.radio-float + .radio-float{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.radio-text{
+  float: left;
+  margin-left: 80px;
+}
+.radio-wrapper{
+  width: 830px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  border: solid 1px #ebebeb;
+  margin-top: 15px;
+  border-radius: 3px;
+  margin-left: 83px;
+}
+.star-wrapper3{
+  margin-left: 65px;
+}
+.btn-primary-large{
+  padding-left: 35px !important;
+  padding-right: 35px !important;
+  margin-left: 375px;
+}
+.btn-primary-large1{
+  padding-left: 35px !important;
+  padding-right: 35px !important;
+  margin-left: 400px;
+  + .btn-primary-large2{
+    margin-left: 35px;
+  }
+}
+.btn-primary-large2{
+  padding-left: 35px !important;
+  padding-right: 35px !important;
+  margin-left: 400px;
+}
+.btn-info-add-wrapper{
+  margin-top: 15px;
+}
+.top-nav-margin{
+  margin-bottom: 15px;
+}
+.limit{
+  margin-bottom: 15px;
+}
+.wizard ul li.done{
+  background: #f1f5f9;
+  &:after{
+    border-left-color: #f1f5f9;
+  }
+}
+.wizard .badge-done{
+  background: #47ce82;
+}
+.control-label-float{
+  float: left;
+  line-height: 30px;
+  margin-right: 10px;
+}
+select.form-width{
+  width: 132px;
+}
+.rule-des > table > tr > td{
+
+}
+ .rule-des > tbody > tr > th, .rule-des > tfoot > tr > th, .rule-des > thead > tr > td, .rule-des > tbody > tr > td, .rule-des > tfoot > tr > td{
+  text-align: left;
+}
+
+.star-width{
+  width: 146px;
+  text-align: right;
+}
+
+.parsley-validated-width{
+  width: 133px !important;
+}
+.td-item{
+  margin-bottom: 15px;
+}
+.td-ruleName{
+  width: 190px;
+  
+}
+.td-align{
+  padding-right: 45px !important;
+  text-align: right !important;
+  vertical-align:middle !important;
+}
+th.td-info{
+ width: 573px;
+}
+
+.rule-des tr:nth-child(even){
+  background: #fafafa;
+}
+.td-paddingTop{
+  padding-top: 18px !important;
+}
+
+.activity-info{
+  height: 40px;
+}
+.left-title{
+  float: left;
+  line-height: 40px;
+}
+.link-item{
+  display: block;
+  width: 204px;
+  height: 204px;
+  border: solid 1px #e8e8e8;
+}
+.circle{
+  width: 114px;
+  height: 114px;
+  background: #e3e3e3;
+  border-radius:50%;
+  position: relative;
+  margin-left: 45px;
+  margin-top: 27px;
+}
+.circle-icon2{
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 30px;
+}
+
+.circle-text{
+  font-size: 18px;
+  text-align:center;
+  margin-top: 10px;
+}
+.link-item-active{
+  .circle{
+    background: #27c3a5;
+  }
+  .circle-text{
+    color: #3b5b79;
+  }
+}
+
+.link-item{
+  float: left;
+}
+.link-item + .link-item{
+  margin-left: 90px;
+}
+.link-row{
+  margin-top: 20px;
+  margin-left: 65px;
+  width: 820px;
+}
+.panel-icon{
+  margin-top: 15px;
+  padding-bottom: 35px;
 }
 .table-wrapper{
   .disabled, .disabled i{
@@ -1851,10 +2043,17 @@ select.input-small2{
   color: #2a6496;
 }
 .activity-add-operation{
-  width: 250px;
+  width: 140px;
+  text-align: center;
   a{
     color: blue;
+    + a{
+      margin-left: 15px;
+    }
   }
+}
+.date-time{
+  width: 120px;
 }
 .table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td{
   vertical-align: middle;
@@ -1950,4 +2149,7 @@ select.input-small2{
   .btn + .btn{
     margin-left: 30px;
   }
+}
+.step-pane{
+  padding: 0 5px;
 }

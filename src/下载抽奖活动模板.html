@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <meta http-equiv="Cache-Control" content="no-transform"/>
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
     <meta name="format-detection" content="telephone=no"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta content="yes" name="apple-touch-fullscreen"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-    <title>表单</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>下载抽奖活动模板</title>
 
     <link rel="stylesheet" href="css/bootstrap.css">
 
@@ -18,127 +18,240 @@
     <link rel="stylesheet" href="css/plugin.css">
 
     <link rel="stylesheet" href="css/style.css">
-    <!--[if lt IE 9]>
-
-    <script src="js/ie/html5.js"></script>
-
-    <![endif]-->
+    <link rel="stylesheet" href="css/frame.css">
 </head>
 <body>
-<section class="main padder">
-    <div class="top-nav">
-        <span class="nav-itme">活动管理</span>
-        <span class="nav-itme">活动列表</span>
-        <span class="nav-itme">创建活动</span>
-        <span></span>
-
-    </div>
-
-    <section class="panel">
-        <div class="wizard clearfix m-b" id="form-wizard">
-
-            <ul class="steps">
-
-                <li data-target="#step1" class="active"><span class="badge badge-info">1</span>基本信息</li>
-
-                <li data-target="#step2"><span class="badge">2</span>奖项设置</li>
-
-                <li data-target="#step3"><span class="badge">3</span>活动规则</li>
-
-                <li data-target="#step4"><span class="badge">4</span>奖项设置</li>
-
-                <li data-target="#step5"><span class="badge">5</span>活动规则</li>
-
+<div class="main-container">
+    <aside class="left-slider">
+        <div class="slider-view">
+            <ul class="js-slider-container">
             </ul>
-            <button class="btn-return">返回</button>
-
         </div>
-        <div class="line-title">
-            活动基本信息
+    </aside>
+    <header class="main-top-nav">
+        <div class="nav-menu">
+            <div class="top-nav-logo">
+                <img src="images/f_1.png" alt="MM营销平台" class="logo">
+                MM后台管理
+            </div>
+            <ul class="nav">
+                <li>
+                    <div>
+                        <img src="images/f_2.png" alt="" class="img-user">@john
+                    </div>
+                </li>
+                <li>
+                    <a class="btn btn-small btn-white">安全退出</a>
+                </li>
+            </ul>
         </div>
-        <div class="control-field control-field2">
-            <div class="star-wrapper">
-                <span class="red-star">*</span>
-                活动名称:
-            </div>
-            <input type="text" name="text" placeholder="" class="input-small form-control parsley-validated parsley-validated2" data-required="true" data-type="email">
-            <span class="red-tips">(1-30个字符组成)</span>
+    </header>
+    <aside class="right-content">
+        <div class="top-nav  border padder">
+            <span class="nav-item">活动管理</span>
+            <i class="icon-angle-right"></i>
+            <span class="nav-item">活动列表</span>
+            <i class="icon-angle-right"></i>
+            <span class="nav-item">创建活动</span>
+            <i class="icon-angle-right"></i>
+            <span class="nav-item">典型活动模板</span>
+            <i class="icon-angle-right"></i>
+            <span class="nav-item">下载抽奖活动模板</span>
         </div>
-        <div class="form-group form-group2">
-            <div class="star-wrapper">
-                <span class="red-star">*</span>
-                活动时间:
-            </div>
-
-            <div class="control-field">
-
-            </div>
-            <div class="control-field">
-                <input class="input-small form-control datepicker datepicker2" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy">
-            </div>
-            <div class="help-float">至</div>
-            <div class="control-field">
-                <input class="input-small form-control datepicker datepicker2" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy">
-            </div>
-        </div>
-        <div class="line-title">
-            活动范围以及目标用户
-        </div>
-        <div class="pannel-wrapper">
-            <div class="star-wrapper star-wrapper2">
-                <span class="red-star">*</span>
-                活动时间:
-            </div>
-            <div class="control-radio-group control-radio-group2">
-                <select name="account" class="input-small input-small2">
-                    <option value="1">Editor</option>
-                    <option value="0">Admin</option>
-                </select>
-                <div class="checkbox">
-                    <label class="checkbox-custom">
-                        <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox" data-parsley-id="15">
-                        <i class="icon-unchecked"></i>
-                        移动用户
-                    </label>
+        <section class="main padder">
+            <section class="panel">
+                <div class="wizard clearfix m-b" id="form-wizard">
+                    <ul class="steps">
+                        <li data-target="#step1" class="active"><span class="badge badge-info">1</span>基本信息</li>
+                        <li data-target="#step2"><span class="badge">2</span>奖项设置</li>
+                        <li data-target="#step3"><span class="badge">3</span>活动规则</li>
+                        <li data-target="#step4"><span class="badge">4</span>奖项设置</li>
+                        <li data-target="#step5"><span class="badge">5</span>活动规则</li>
+                    </ul>
+                    <button class="btn btn-small btn-default btn-return">返回</button>
                 </div>
-                <div class="checkbox">
-                    <label class="checkbox-custom">
-                        <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
-                        <i class="icon-unchecked"></i>
-                        电信用户
-                    </label>
+                <div class="step-content">
+                    <div class="step-pane active" id="step1">
+                        <div class="line-title">
+                            活动基本信息
+                        </div>
+                        <div class="control-field control-field2">
+                            <div class="star-wrapper">
+                                <span class="red-star">*</span>
+                                活动名称:
+                            </div>
+                            <input type="text" name="text" placeholder="" class="input-small form-control parsley-validated parsley-validated2" data-required="true" data-type="email">
+                            <span class="red-tips">(1-30个字符组成)</span>
+                        </div>
+                        <div class="form-group form-group2">
+                            <div class="star-wrapper">
+                                <span class="red-star">*</span>
+                                活动时间:
+                            </div>
+
+                            <div class="control-field">
+
+                            </div>
+                            <div class="control-field">
+                                <input class="input-small form-control datepicker datepicker2" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy">
+                            </div>
+                            <div class="help-float">至</div>
+                            <div class="control-field">
+                                <input class="input-small form-control datepicker datepicker2" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy">
+                            </div>
+                        </div>
+                        <div class="line-title line-title-large">
+                            活动范围以及目标用户
+                        </div>
+                        <div class="pannel-wrapper">
+                            <div class="star-wrapper star-wrapper2">
+                                <span class="red-star">*</span>
+                                目标客户:
+                            </div>
+                            <div class="control-radio-group control-radio-group2">
+                                <select name="account" class="input-small form-control input-small2">
+                                    <option value="1">全国</option>
+                                    <option value="0">广东</option>
+                                </select>
+                                <div class="checkbox">
+                                    <label class="checkbox-custom">
+                                        <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox" data-parsley-id="15">
+                                        <i class="icon-unchecked"></i>
+                                        移动用户
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label class="checkbox-custom">
+                                        <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
+                                        <i class="icon-unchecked"></i>
+                                        电信用户
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label class="checkbox-custom">
+                                        <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
+                                        <i class="icon-unchecked"></i>
+                                        联通用户
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label class="checkbox-custom">
+                                        <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
+                                        <i class="icon-unchecked"></i>
+                                        自定义用户
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-info-add-wrapper">
+                            <a href="#" class="btn btn-info btn-info-add"><i class="icon-plus-sign icon-plus-sign2"></i>新增</a>
+                        </div>
+                        <div class="line-title line-title-large">
+                            黑名单限制
+                        </div>
+                        <div class="btn-group clear-fixed" data-toggle="buttons">
+
+                            <div class="black-list">黑名单设置：</div>
+                            <label class="btn btn-small btn-white">
+
+                                <input type="radio" name="options" id="option1"> ON
+
+                            </label>
+
+                            <label class="btn btn-small btn-white active">
+
+                                <input type="radio" name="options" id="option2"> OFF
+
+                            </label>
+
+                        </div>
+                        <div class="radio-wrapper">
+                            <div class="limit clear-fixed">
+
+                                <div class="radio-text">
+                                    限制方式：
+                                </div>
+
+                                <div class="radio radio-float">
+
+                                    <label class="radio-custom radio-custom-block">
+
+                                        <input type="radio" name="radio" checked="checked">
+
+                                        <i class="icon-circle-blank checked"></i>
+
+                                        抽奖时限制
+
+                                    </label>
+
+                                </div>
+
+                                <div class="radio radio-float">
+
+                                    <label class="radio-custom radio-custom-block">
+
+                                        <input type="radio" name="radio">
+
+                                        <i class="icon-circle-blank"></i>
+
+                                        中奖时限制
+
+                                    </label>
+
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="control-field control-field2">
+                                <div class="star-wrapper star-wrapper3">
+                                    <span class="red-star">*</span>
+                                    黑名单组ID：
+                                </div>
+                                <input type="text" name="text" placeholder="" class="input-small form-control parsley-validated parsley-validated2" data-required="true" data-type="email">
+                                <span class="red-tips" style="display: none">(1-30个字符组成)</span>
+                            </div>
+                        </div>
+                        <div class="btn-info-add-wrapper">
+                            <a href="#" class="btn btn-primary btn-primary-large2" data-target="#form-wizard" data-wizard="next">下一步</a>
+                        </div>
+                    </div>
+                    <div class="step-pane" id="step2">
+                        <div class="btn-info-add-wrapper">
+                            <a href="#" class="btn btn-white btn-primary-large1" data-target="#form-wizard" data-wizard="previous">上一步</a>
+                            <a href="#" class="btn btn-primary btn-primary-large2" data-target="#form-wizard" data-wizard="next">下一步</a>
+                        </div>
+                    </div>
+                    <div class="step-pane" id="step3">
+                        <div class="btn-info-add-wrapper">
+                            <a href="#" class="btn btn-white btn-primary-large1" data-target="#form-wizard" data-wizard="previous">上一步</a>
+                            <a href="#" class="btn btn-primary btn-primary-large2" data-target="#form-wizard" data-wizard="next">下一步</a>
+                        </div>
+                    </div>
+                    <div class="step-pane" id="step4">
+                        <div class="btn-info-add-wrapper">
+                            <a href="#" class="btn btn-white btn-primary-large1" data-target="#form-wizard" data-wizard="previous">上一步</a>
+                            <a href="#" class="btn btn-primary btn-primary-large2" data-target="#form-wizard" data-wizard="next">下一步</a>
+                        </div>
+                    </div>
+                    <div class="step-pane" id="step5">
+                        <div class="btn-info-add-wrapper">
+                            <a href="#" class="btn btn-white btn-primary-large1" data-target="#form-wizard" data-wizard="previous">上一步</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="checkbox">
-                    <label class="checkbox-custom">
-                        <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
-                        <i class="icon-unchecked"></i>
-                        联通用户
-                    </label>
-                </div>
-                <div class="checkbox">
-                    <label class="checkbox-custom">
-                        <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
-                        <i class="icon-unchecked"></i>
-                        自定义用户
-                    </label>
-                </div>
-            </div>
-        </div>
+            </section>
 
-        <a href="#" class="btn btn-info btn-info-add"><i class="icon-plus-sign icon-plus-sign2"></i>新增</a>
-        <div class="line-title">
-            黑名单限制
-        </div>
-
-    </section>
-
-
-</section>
+        </section>
+    </aside>
+</div>
 </body>
 
 <!-- / footer -->
 
 <script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
 
 <!-- Bootstrap -->
 
@@ -165,6 +278,10 @@
 
 <script src="js/app.plugin.js"></script>
 
-
-
+<script>
+    // wizard
+    $(document).on('click', '[data-wizard]', function (e) {
+        wizardToNext($(this))
+    });
+</script>
 </html>
