@@ -82,7 +82,7 @@ $(function () {
     }
 
     Slider.prototype = {
-        parentTpl: '<li class="submenu open"><a href="#" class="js-menu"><i class="icon icon-th-list"></i> <span>{name}</span></a><ul>{child}</ul></li>',
+        parentTpl: '<li class="submenu open"><a href="#" class="js-menu"><i class="icon {icon}"></i> <span>{name}</span></a><ul>{child}</ul></li>',
         childTpl: '<li data-sk="{sk}"><a href="{href}">{name}</a></li>',
         init: function () {
             var me = this;
@@ -166,7 +166,7 @@ $(function () {
                     })
                     str = util.compile(me.childTpl, child);
                 }
-                html += util.compile(me.parentTpl, {name: obj.name, child: str});
+                html += util.compile(me.parentTpl, {icon: obj.icon || 'icon-xlarge', name: obj.name, child: str});
             });
             me.$el.html(html)
         },
@@ -178,6 +178,7 @@ $(function () {
     var slider = new Slider('.js-slider-container', [
         {
             name: '活动管理',
+            icon: 'icon-star',
             child: [
                 {
                     name: '所有活动',
@@ -199,6 +200,7 @@ $(function () {
         },
         {
             name: '奖品管理',
+            icon: 'icon-gift',
             child: [
                 {
                     name: '奖品池管理',
@@ -220,6 +222,7 @@ $(function () {
         },
         {
             name: '数据报表',
+            icon: 'icon-signal',
             child: [
                 {
                     name: '整体数据统计',

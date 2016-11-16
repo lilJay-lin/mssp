@@ -1793,7 +1793,12 @@ textarea {
 .btn-return.btn-default.btn-small{
   float: right;
   margin-top: 3px;
-  margin-right: 15px;
+  margin-right: 20px;
+  padding: 5px 15px;
+}
+.btn-import.btn-default.btn-small{
+  float: right;
+  margin-top: -5px;
   padding: 5px 15px;
 }
 .form-group2:after{
@@ -1971,6 +1976,14 @@ th.td-info{
   width: 204px;
   height: 204px;
   border: solid 1px #e8e8e8;
+  &:hover{
+    .circle{
+      background: #27c3a5;
+    }
+    .circle-text{
+      color: #3b5b79;
+    }
+  }
 }
 .circle{
   width: 114px;
@@ -1981,15 +1994,30 @@ th.td-info{
   margin-left: 45px;
   margin-top: 27px;
 }
-.circle-icon2{
+.circle-icon{
   width: 55px;
   height: 55px;
   position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  top: 30px;
+  left: 50%;
+  top:  50%;
+  transform: translate3d(-50%, -50%, 0);
+  img{
+    width: 100%;
+    hiehgt: auto;
+  }
+}
+.circle-icon6{
+  position: absolute;
+  width: 102px;
+  height: 102px;
+  left: 50%;
+  top:  50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.circle-icon3{
+  position: absolute;
+  width: 35px;
+  height: 56px;
 }
 
 .circle-text{
@@ -2043,7 +2071,7 @@ th.td-info{
   color: #2a6496;
 }
 .activity-add-operation{
-  width: 140px;
+  padding:0;
   text-align: center;
   a{
     color: blue;
@@ -2052,6 +2080,17 @@ th.td-info{
     }
   }
 }
+.activity-award-operation{
+   width: 140px;
+   padding:0;
+   text-align: center;
+   a{
+     color: blue;
+     + a{
+       margin-left: 15px;
+     }
+   }
+ }
 .date-time{
   width: 120px;
 }
@@ -2152,4 +2191,83 @@ th.td-info{
 }
 .step-pane{
   padding: 0 5px;
+}
+
+.pillbox-inline{
+  display: inline-block;
+  border: 0;
+  margin-bottom: 0;
+  float: right;
+  margin-left: 20px;
+  ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    font-size: 12px;
+    color: #fff;
+    padding: 6px 8px;
+    cursor: pointer;
+    margin: 2px;
+    float: left;
+  }
+}
+.add-more-account{
+  margin-left: 450px;
+  .btn-circle > i{
+    width: 40px;
+    height: 40px;
+    padding: 9px 0;
+    margin:0;
+  }
+}
+.btn-circle{
+  &.btn-minus-customer, &.btn-minus-account{
+    padding-top: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    bottom: 6px;
+    > i{
+      width: 25px;
+      height: 25px;
+      padding: 5px 0;
+      font-size: 16px;
+      background: #fff;
+      border: 1px solid red;
+      color: red;
+    }
+    &:hover > i{
+      color: red;
+      background: #fff;
+    }
+    background: #fff;
+    color: red;
+  }
+  &.btn-minus-customer{
+    margin-top: 15px;
+  }
+}
+
+.import-file {
+  input[type=file] {
+    display: none;
+  }
+  a{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    overflow: hidden;
+    margin-bottom:0;
+    input[type=file]{
+      display: inline-block;
+    }
+  }
+  .download-framemark{
+    display: inline;
+    padding: 4px 10px;
+  }
 }

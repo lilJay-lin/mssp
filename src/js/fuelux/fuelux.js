@@ -1606,6 +1606,20 @@
 			return {
 				step: this.currentStep
 			};
+		},
+
+		toStep: function (step){
+			var canMoveNext = (step <= this.numSteps);
+
+			if (canMoveNext) {
+				var e = $.Event('change');
+				this.$element.trigger(e, {step: this.currentStep, direction: 'toStep'});
+
+				if (e.isDefaultPrevented()) return;
+
+				this.currentStep = step;
+				this.setState();
+			}
 		}
 	};
 

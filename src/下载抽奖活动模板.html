@@ -71,159 +71,489 @@
                     <button class="btn btn-small btn-default btn-return">返回</button>
                 </div>
                 <div class="step-content">
-                    <div class="step-pane active" id="step1">
+                    <div class="step-pane  active" id="step1">
                         <div class="line-title">
                             活动基本信息
                         </div>
-                        <div class="control-field control-field2">
-                            <div class="star-wrapper">
-                                <span class="red-star">*</span>
-                                活动名称:
-                            </div>
-                            <input type="text" name="text" placeholder="" class="input-small form-control parsley-validated parsley-validated2" data-required="true" data-type="email">
-                            <span class="red-tips">(1-30个字符组成)</span>
-                        </div>
-                        <div class="form-group form-group2">
-                            <div class="star-wrapper">
-                                <span class="red-star">*</span>
-                                活动时间:
-                            </div>
-
-                            <div class="control-field">
-
-                            </div>
-                            <div class="control-field">
-                                <input class="input-small form-control datepicker datepicker2" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy">
-                            </div>
-                            <div class="help-float">至</div>
-                            <div class="control-field">
-                                <input class="input-small form-control datepicker datepicker2" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy">
-                            </div>
-                        </div>
-                        <div class="line-title line-title-large">
-                            活动范围以及目标用户
-                        </div>
-                        <div class="pannel-wrapper">
-                            <div class="star-wrapper star-wrapper2">
-                                <span class="red-star">*</span>
-                                目标客户:
-                            </div>
-                            <div class="control-radio-group control-radio-group2">
-                                <select name="account" class="input-small form-control input-small2">
-                                    <option value="1">全国</option>
-                                    <option value="0">广东</option>
-                                </select>
-                                <div class="checkbox">
-                                    <label class="checkbox-custom">
-                                        <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox" data-parsley-id="15">
-                                        <i class="icon-unchecked"></i>
-                                        移动用户
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label class="checkbox-custom">
-                                        <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
-                                        <i class="icon-unchecked"></i>
-                                        电信用户
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label class="checkbox-custom">
-                                        <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
-                                        <i class="icon-unchecked"></i>
-                                        联通用户
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label class="checkbox-custom">
-                                        <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
-                                        <i class="icon-unchecked"></i>
-                                        自定义用户
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="btn-info-add-wrapper">
-                            <a href="#" class="btn btn-info btn-info-add"><i class="icon-plus-sign icon-plus-sign2"></i>新增</a>
-                        </div>
-                        <div class="line-title line-title-large">
-                            黑名单限制
-                        </div>
-                        <div class="btn-group clear-fixed" data-toggle="buttons">
-
-                            <div class="black-list">黑名单设置：</div>
-                            <label class="btn btn-small btn-white">
-
-                                <input type="radio" name="options" id="option1"> ON
-
-                            </label>
-
-                            <label class="btn btn-small btn-white active">
-
-                                <input type="radio" name="options" id="option2"> OFF
-
-                            </label>
-
-                        </div>
-                        <div class="radio-wrapper">
-                            <div class="limit clear-fixed">
-
-                                <div class="radio-text">
-                                    限制方式：
-                                </div>
-
-                                <div class="radio radio-float">
-
-                                    <label class="radio-custom radio-custom-block">
-
-                                        <input type="radio" name="radio" checked="checked">
-
-                                        <i class="icon-circle-blank checked"></i>
-
-                                        抽奖时限制
-
-                                    </label>
-
-                                </div>
-
-                                <div class="radio radio-float">
-
-                                    <label class="radio-custom radio-custom-block">
-
-                                        <input type="radio" name="radio">
-
-                                        <i class="icon-circle-blank"></i>
-
-                                        中奖时限制
-
-                                    </label>
-
-                                </div>
-
-
-
-
-                            </div>
+                        <form class="form-horizontal" method="">
                             <div class="control-field control-field2">
-                                <div class="star-wrapper star-wrapper3">
+                                <div class="star-wrapper">
                                     <span class="red-star">*</span>
-                                    黑名单组ID：
+                                    活动名称:
                                 </div>
                                 <input type="text" name="text" placeholder="" class="input-small form-control parsley-validated parsley-validated2" data-required="true" data-type="email">
-                                <span class="red-tips" style="display: none">(1-30个字符组成)</span>
+                                <span class="red-tips">(1-30个字符组成)</span>
                             </div>
-                        </div>
-                        <div class="btn-info-add-wrapper">
-                            <a href="#" class="btn btn-primary btn-primary-large2" data-target="#form-wizard" data-wizard="next">下一步</a>
-                        </div>
+                            <div class="form-group form-group2">
+                                <div class="star-wrapper">
+                                    <span class="red-star">*</span>
+                                    活动时间:
+                                </div>
+
+                                <div class="control-field">
+
+                                </div>
+                                <div class="control-field">
+                                    <input class="input-small form-control datepicker datepicker2" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy">
+                                </div>
+                                <div class="help-float">至</div>
+                                <div class="control-field">
+                                    <input class="input-small form-control datepicker datepicker2" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy">
+                                </div>
+                            </div>
+                            <div class="line-title line-title-large">
+                                活动范围以及目标用户
+                            </div>
+                            <div class="pannel-wrapper">
+                                <div class="star-wrapper star-wrapper2">
+                                    <span class="red-star">*</span>
+                                    目标客户:
+                                </div>
+                                <div class="control-radio-group control-radio-group2">
+                                    <select name="" class="input-small form-control input-small2">
+                                        <option value="1">全国</option>
+                                        <option value="0">广东</option>
+                                    </select>
+                                    <div class="checkbox">
+                                        <label class="checkbox-custom">
+                                            <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox" data-parsley-id="15">
+                                            <i class="icon-unchecked"></i>
+                                            移动用户
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox-custom">
+                                            <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
+                                            <i class="icon-unchecked"></i>
+                                            电信用户
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox-custom">
+                                            <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
+                                            <i class="icon-unchecked"></i>
+                                            联通用户
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox-custom">
+                                            <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
+                                            <i class="icon-unchecked"></i>
+                                            自定义用户
+                                        </label>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0)" class="btn btn-circle btn-minus-customer" style="display: none"><i class="icon-minus"></i></a>
+                            </div>
+                            <div class="btn-info-add-wrapper">
+                                <a href="javascript:void(0)" class="btn btn-info btn-info-add js-add-pannel-wrapper"><i class="icon-plus-sign icon-plus-sign2"></i>新增</a>
+                            </div>
+                            <div class="line-title line-title-large">
+                                黑名单限制
+                            </div>
+                            <div class="btn-group clear-fixed " data-toggle="buttons">
+
+                                <div class="black-list">黑名单设置：</div>
+                                <label class="btn btn-small btn-white active  js-on">
+
+                                    <input type="radio" name="options" id="option1"> ON
+
+                                </label>
+
+                                <label class="btn btn-small btn-white  js-off">
+
+                                    <input type="radio" name="options" id="option2"> OFF
+
+                                </label>
+
+                            </div>
+                            <div class="radio-wrapper">
+                                <div class="limit clear-fixed">
+
+                                    <div class="radio-text">
+                                        限制方式：
+                                    </div>
+
+                                    <div class="radio radio-float">
+
+                                        <label class="radio-custom radio-custom-block">
+
+                                            <input type="radio" name="radio" checked="checked">
+
+                                            <i class="icon-circle-blank checked"></i>
+
+                                            抽奖时限制
+
+                                        </label>
+
+                                    </div>
+
+                                    <div class="radio radio-float">
+
+                                        <label class="radio-custom radio-custom-block">
+
+                                            <input type="radio" name="radio">
+
+                                            <i class="icon-circle-blank"></i>
+
+                                            中奖时限制
+
+                                        </label>
+
+                                    </div>
+
+
+
+
+                                </div>
+                                <div class="control-field control-field2">
+                                    <div class="star-wrapper star-wrapper3">
+                                        <span class="red-star">*</span>
+                                        黑名单组ID：
+                                    </div>
+                                    <input type="text" name="text" placeholder="" class="input-small form-control parsley-validated parsley-validated2" data-required="true" data-type="email">
+                                    <span class="red-tips" style="display: none">(1-30个字符组成)</span>
+                                </div>
+                            </div>
+                            <div class="btn-info-add-wrapper">
+                                <a href="#" class="btn btn-primary btn-primary-large2" data-target="#form-wizard" data-wizard="next">下一步</a>
+                            </div>
+                        </form>
                     </div>
                     <div class="step-pane" id="step2">
-                        <div class="btn-info-add-wrapper">
-                            <a href="#" class="btn btn-white btn-primary-large1" data-target="#form-wizard" data-wizard="previous">上一步</a>
-                            <a href="#" class="btn btn-primary btn-primary-large2" data-target="#form-wizard" data-wizard="next">下一步</a>
+                        <div class="js-award-setting" >
+                            <section class="nav-control-btns">
+                                <a href="javascript:void(0)" class="btn btn-primary js-add-award">新增奖项</a>
+                                <a href="javascript:void(0)" class="btn btn-primary js-import-award">导入奖项</a>
+                            </section>
+                            <div class="line-title">
+                                奖项列表
+                            </div>
+                            <section class="table-wrapper">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>奖品ID</th>
+                                        <th>奖品名称</th>
+                                        <th>奖项等级</th>
+                                        <th>总数量</th>
+                                        <th>中奖率</th>
+                                        <th>投放方式</th>
+                                        <th>投放地市</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="table-activity-name">
+                                            <div class="table-activity-name">
+                                                中国移动积分换京券
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="activity-award-operation">
+                                            <div class="activity-award-operation">
+                                                <a href="">编辑</a>
+                                                <a href="">删除</a>
+                                                <a href="">设置奖码</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+                            <div class="btn-info-add-wrapper">
+                                <a href="#" class="btn btn-white btn-primary-large1" data-target="#form-wizard" data-wizard="previous">上一步</a>
+                                <a href="#" class="btn btn-primary btn-primary-large2" data-target="#form-wizard" data-wizard="next">下一步</a>
+                            </div>
+                        </div>
+                        <div class="js-addAward" style="display: none">
+                            <div class="line-title">
+                                奖项设置
+                                <a href="javascript:void(0)" class="btn btn-small btn-default btn-import js-import-award">导入奖项</a>
+                            </div>
+                            <form class="form-horizontal" method="">
+                                <div class="form-group">
+                                    <label class="control-label"><span class="control-label-required">*</span>奖品类型</label>
+                                    <div class="control-radio-group award_type">
+                                        <div class="radio">
+                                            <label class="radio-custom">
+                                                <input type="radio" name="radio"><i class="icon-circle-blank"></i>实物
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label class="radio-custom">
+                                                <input type="radio" name="radio" ><i class="icon-circle-blank"></i>流量
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label class="radio-custom">
+                                                <input type="radio" name="radio"><i class="icon-circle-blank"></i>码劵
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label"><span class="control-label-required">*</span>奖品ID：</label>
+                                    <div class="control-field">
+                                        <input type="text" name="text" placeholder="奖品ID" readonly class="input-small form-control">
+                                        <div class="help-inline red"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">奖品名称：</label>
+                                    <div class="control-field">
+                                        <input type="text" name="text" placeholder="奖品名称"  class="input-small form-control">
+                                        <div class="help-inline red"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">奖品等级：</label>
+                                    <div class="control-field">
+                                        <input type="text" name="text" placeholder="奖品等级" readonly  class="input-small form-control">
+                                        <div class=" pillbox-inline">
+                                            <ul>
+                                                <li class="label bg-success">一等奖</li>
+                                                <li class="label bg-success">二等奖</li>
+                                                <li class="label bg-success">三等奖</li>
+                                                <li class="label bg-success">四等奖</li>
+                                                <li class="label bg-success">五等奖</li>
+                                                <li class="label bg-success">六等奖</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">中奖率：</label>
+                                    <div class="control-field">
+                                        <input type="text" name="text" placeholder="中奖率" readonly  class="input-small form-control">
+                                        <div class=" pillbox-inline">
+                                            <ul>
+                                                <li class="label bg-success">万分之一</li>
+                                                <li class="label bg-success">千分之一</li>
+                                                <li class="label bg-success">百分之一</li>
+                                                <li class="label bg-success">十分之一</li>
+                                                <li class="label bg-success">必中</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">奖品描述：</label>
+                                    <div class="control-field">
+                                        <textarea placeholder="奖品描述" rows="5" class="form-control input-small"></textarea>
+                                        <div class="help-inline red"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group js-account">
+                                    <label class="control-label"><span class="control-label-required">*</span>投放地市：</label>
+                                    <div class="control-field">
+                                        <select name="" class="input-small form-control">
+                                            <option value="1">全国</option>
+                                        </select>
+                                    </div>
+                                    <label class="control-label"><span class="control-label-required">*</span>投放数量：</label>
+                                    <div class="control-field">
+                                        <input type="text" name="awardCounts" placeholder="投放数量"  class="input-small form-control">
+                                        <a href="javascript:void(0)" class="btn btn-circle btn-minus-account" style="display: none"><i class="icon-minus"></i></a>
+                                        <div class="help-inline red">（奖品池剩余数量：40000）</div>
+                                    </div>
+                                </div>
+                                <div class="add-more-account">
+                                    <a href="javascript:void(0)" class="btn btn-primary btn-circle "><i class="icon-plus"></i></a>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label"><span class="control-label-required">*</span>投放方式：</label>
+                                    <div class="control-radio-group award_type">
+                                        <div class="radio">
+                                            <label class="radio-custom">
+                                                <input type="radio" name="radio" checked><i class="icon-circle-blank"></i>按小时投放
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label class="radio-custom">
+                                                <input type="radio" name="radio" ><i class="icon-circle-blank"></i>全量投放
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">奖品数量：</label>
+                                    <div class="control-field">
+                                        <input type="text" name="text" placeholder="0" readonly  class="input-small form-control">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="btn-info-add-wrapper">
+                                <a href="javascript:void(0)" class="btn btn-primary btn-primary-large1 js-check-account">确定</a>
+                                <a href="#" class="btn btn-white  btn-primary-large2 js-go-back">取消</a>
+                            </div>
+                        </div>
+                        <div class="js-importAward" style="display: none">
+                            <div class="line-title">
+                                导入设置
+                                <a href="javascript:void(0)" class="btn btn-small btn-default btn-import js-add-award">新增奖项</a>
+                            </div>
+                            <form class="form-horizontal" method="">
+                                <div class="form-group ">
+                                    <label class="control-label">导入方式：</label>
+                                    <div class="control-field">
+                                        <select name="" class="input-small form-control">
+                                            <option value="1"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group import-file">
+                                    <label class="control-label">导入奖项：</label>
+                                    <div class="control-field">
+                                        <input type="text" name="text" placeholder="请导入excel格式数据文件" readonly  class="input-small form-control">
+                                        <input type="file" name="file" title="浏览" class="btn btn-small btn-info m-b-small">
+                                        <a href="" class="download-framemark">下载模板</a>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="btn-info-add-wrapper">
+                                <a href="#" class="btn btn-primary btn-primary-large1">确定</a>
+                                <a href="#" class="btn btn-white  btn-primary-large2  js-go-back">取消</a>
+                            </div>
                         </div>
                     </div>
                     <div class="step-pane" id="step3">
+                        <section class="table-wrapper">
+                            <table class="table table-bordered rule-des">
+                                <thead>
+                                <tr>
+                                    <th class="td-ruleName">规则名称</th>
+                                    <th class="td-info">配置信息</th>
+                                    <th class="td-des">说明</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="td-align">抽奖机会获取规则</td>
+                                    <td class="td-paddingTop">
+                                        <div class="td-item clear-fixed">
+                                            <div class="star-wrapper star-width">
+                                                获取方式 :
+                                            </div>
+                                            <select name="account" class="input-small form-control form-width">
+                                                <option value="1">下载/更新热卖</option>
+                                                <option value="0">广东</option>
+                                            </select>
+                                        </div>
+                                        <div class="td-item clear-fixed">
+                                            <div class="star-wrapper star-width">
+                                                应用范围 :
+                                            </div>
+                                            <select name="account" class="input-small form-control form-width">
+                                                <option value="1">下载/更新热卖</option>
+                                                <option value="0">广东</option>
+                                            </select>
+                                        </div>
+                                        <div class="control-field control-field2">
+                                            <div class="star-wrapper star-width">
+                                                下载应用兑换率 :
+                                            </div>
+                                            <input type="text" name="text" placeholder="" class="input-small form-control parsley-validated parsley-validated-width" data-required="true" data-type="email">
+                                            <span>个应用=1次抽奖机会</span>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-align">
+                                        抽奖次数规则
+                                    </td>
+                                    <td class="td-paddingTop">
+                                        <div class="control-field control-field2">
+                                            <div class="star-wrapper star-width">
+                                                用户每天抽奖次数 :
+                                            </div>
+                                            <input type="text" name="text" placeholder="" class="input-small form-control parsley-validated parsley-validated-width" data-required="true" data-type="email">
+                                            <span class="red-tips">*1-9999之间的数字</span>
+                                        </div>
+                                        <div class="control-field control-field2">
+                                            <div class="star-wrapper star-width">
+                                                活动期间用户总抽奖次数 :
+                                            </div>
+                                            <input type="text" name="text" placeholder="" class="input-small form-control parsley-validated parsley-validated-width" data-required="true" data-type="email">
+                                            <span class="red-tips">*1-9999之间的数字</span>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-align">中奖规则</td>
+                                    <td class="td-paddingTop">
+                                        <div class="control-field control-field2">
+                                            <div class="star-wrapper star-width">
+                                                用户每天中奖次数 :
+                                            </div>
+                                            <input type="text" name="text" placeholder="" class="input-small form-control parsley-validated parsley-validated-width" data-required="true" data-type="email">
+                                            <span class="red-tips">*1-9999之间的数字</span>
+                                        </div>
+                                        <div class="control-field control-field2">
+                                            <div class="star-wrapper star-width">
+                                                每个奖项中奖次数 :
+                                            </div>
+                                            <input type="text" name="text" placeholder="" class="input-small form-control parsley-validated parsley-validated-width" data-required="true" data-type="email">
+                                            <span class="red-tips">*1-9999之间的数字</span>
+                                        </div>
+                                        <div class="control-field control-field2">
+                                            <div class="star-wrapper star-width">
+                                                活动期间总中奖次数 :
+                                            </div>
+                                            <input type="text" name="text" placeholder="" class="input-small form-control parsley-validated parsley-validated-width" data-required="true" data-type="email">
+                                            <span class="red-tips">*1-9999之间的数字</span>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-align">奖品发放规则</td>
+                                    <td class="td-paddingTop">
+
+                                        <div class="radio">
+
+                                            <label class="radio-custom radio-custom-block">
+
+                                                <input type="radio" name="radio" checked="checked">
+
+                                                <i class="icon-circle-blank checked"></i>
+
+                                                抽奖时限制
+
+                                            </label>
+
+                                        </div>
+
+                                        <div class="radio">
+
+                                            <label class="radio-custom radio-custom-block">
+
+                                                <input type="radio" name="radio">
+
+                                                <i class="icon-circle-blank"></i>
+
+                                                中奖时限制
+
+                                            </label>
+
+                                        </div>
+
+
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </section>
                         <div class="btn-info-add-wrapper">
                             <a href="#" class="btn btn-white btn-primary-large1" data-target="#form-wizard" data-wizard="previous">上一步</a>
                             <a href="#" class="btn btn-primary btn-primary-large2" data-target="#form-wizard" data-wizard="next">下一步</a>
@@ -246,6 +576,65 @@
         </section>
     </aside>
 </div>
+<template id="addMoreTpl">
+    <div class="form-group js-account">
+        <label class="control-label"><span class="control-label-required">*</span>投放地市：</label>
+        <div class="control-field">
+            <select name="" class="input-small form-control">
+                <option value="1">全国</option>
+            </select>
+        </div>
+        <label class="control-label"><span class="control-label-required">*</span>投放数量：</label>
+        <div class="control-field">
+            <input type="text" name="awardCounts" placeholder="投放数量"  class="input-small form-control">
+            <a href="javascript:void(0)" class="btn btn-circle btn-minus-account"><i class="icon-minus"></i></a>
+            <div class="help-inline red"></div>
+        </div>
+    </div>
+</template>
+<template id="pannelWrapperTpl">
+    <div class="pannel-wrapper" style="margin-top:15px">
+        <div class="star-wrapper star-wrapper2">
+            <span class="red-star">*</span>
+            目标客户:
+        </div>
+        <div class="control-radio-group control-radio-group2">
+            <select name="" class="input-small form-control input-small2">
+                <option value="1">全国</option>
+                <option value="0">广东</option>
+            </select>
+            <div class="checkbox">
+                <label class="checkbox-custom">
+                    <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox" data-parsley-id="15">
+                    <i class="icon-unchecked"></i>
+                    移动用户
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="checkbox-custom">
+                    <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
+                    <i class="icon-unchecked"></i>
+                    电信用户
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="checkbox-custom">
+                    <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
+                    <i class="icon-unchecked"></i>
+                    联通用户
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="checkbox-custom">
+                    <input type="checkbox" name="checkbox" data-parsley-multiple="checkbox">
+                    <i class="icon-unchecked"></i>
+                    自定义用户
+                </label>
+            </div>
+        </div>
+        <a href="javascript:void(0)" class="btn btn-circle btn-minus-customer"><i class="icon-minus"></i></a>
+    </div>
+</template>
 </body>
 
 <!-- / footer -->
@@ -279,9 +668,81 @@
 <script src="js/app.plugin.js"></script>
 
 <script>
-    // wizard
-    $(document).on('click', '[data-wizard]', function (e) {
-        wizardToNext($(this))
-    });
+
+    $(function(){
+        // wizard
+        $(document).on('click', '[data-wizard]', function (e) {
+            wizardToNext($(this))
+        });
+        /*新增奖品发放奖项*/
+        var text = $('#addMoreTpl').html();
+        $(".add-more-account").on('click', function(e){
+            var $add = $(text);
+            $('.js-account').find('.help-inline').text('');
+            $add.find('.help-inline').text('（奖品池剩余数量：40000）');
+            $(this).before($add);
+            var $els = $('.js-account');
+            $els.length > 1 ? $els.find('.btn-minus-account').show() : $els.find('.btn-minus-account').hide();
+        })
+        $(document).delegate(".btn-minus-account", 'click', function(e){
+            $(this).closest('.form-group').remove();
+            var helpInlines = $('.js-account').find('.help-inline');
+            helpInlines.text('');
+            helpInlines.last().text('（奖品池剩余数量：40000）');
+        })
+
+        /*新增奖项内容切换*/
+        var $contents = [$('.js-award-setting'), $('.js-addAward'), $('.js-importAward')]
+        function hideContents(){
+            $.each($contents, function(){
+                this.hide();
+            })
+        }
+        $(document).delegate('.js-add-award', 'click', function(e){
+            hideContents();
+            $contents[1].show();
+        })
+        $(document).delegate('.js-import-award', 'click', function(e){
+            hideContents();
+            $contents[2].show();
+        })
+        $(document).delegate('.js-go-back', 'click', function(e){
+            hideContents();
+            $contents[0].show();
+        })
+
+        /*新增目标客户*/
+        var panelWrapperText = $('#pannelWrapperTpl').html();
+        $(".js-add-pannel-wrapper").on('click', function(e){
+            var $add = $(panelWrapperText);
+            $(this).parent().before($add);
+            $add.find   ('.checkbox-custom > input[type=checkbox]').each(function () {
+                var $this = $(this);
+                if ($this.data('checkbox')) return;
+                $this.checkbox($this.data());
+            });
+
+            var $els = $('.pannel-wrapper');
+            $els.length > 1 ? $els.find('.btn-minus-customer').show() : $els.find('.btn-minus-customer').hide();
+        })
+        $(document).delegate(".btn-minus-customer", 'click', function(e){
+            $(this).closest('.pannel-wrapper').remove();
+        })
+
+        /*黑名单开关*/
+        $('.js-on').on('click', function(e){
+            $('.radio-wrapper').show();
+        })
+        $('.js-off').on('click', function(e){
+            $('.radio-wrapper').hide();
+        })
+
+        $('.js-check-account').on('click', function(){
+            var inputs = $('input[name="awardCounts"]');
+            inputs.each(function(){
+                console.log($(this).val())
+            })
+        })
+    })
 </script>
 </html>

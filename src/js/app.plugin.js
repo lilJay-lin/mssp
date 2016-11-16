@@ -188,12 +188,7 @@ Date.now = Date.now || function() { return +new Date; };
 		var href;
 		var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, ''));
 		var option = $this.data('wizard');
-		var item = $target.wizard('selectedItem');
-		var $step = $(this).closest('.step-content').find('.step-pane:eq(' + (item.step-1) + ')');
 		$target.wizard(option);
-		var activeStep = (option=="next") ? (item.step+1) : (item.step-1);
-		var prev = ($(this).hasClass('btn-prev') && $(this)) || $(this).prev();
-		prev.attr('disabled', (activeStep == 1) ? true : false);
 	}
 
   });
