@@ -43,7 +43,7 @@ var config = {
         js:  pth + '/js/*.js',
         less:  pth + '/css/*.*',
         img: pth + '/images/*.*',
-        html: pth + '/**/*.html',
+        html: pth + '/*.html',
         font: pth + '/font/*.*',
         vendor:  pth + '/**/*.js',
     },
