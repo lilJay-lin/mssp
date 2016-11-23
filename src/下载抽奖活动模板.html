@@ -560,6 +560,65 @@
                         </div>
                     </div>
                     <div class="step-pane" id="step4">
+                        <section class="nav-control-btns">
+                            <a href="javascript:void(0)" class="btn btn-primary js-show-panel">新增活动页面</a>
+                        </section>
+                        <div class="line-title">
+                            活动界面列表
+                        </div>
+                        <section class="table-wrapper">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>活动首页</th>
+                                    <th>活动页面ID</th>
+                                    <th>活动页面名称</th>
+                                    <th>更新时间</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="table-checkbox-td">
+                                        <div class="radio">
+                                            <label class="radio-custom ">
+                                                <input type="radio" name="header-first" checked="checked">
+                                                <i class="icon-circle-blank checked"></i>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td>中国移动积分换京券</td>
+                                    <td></td>
+                                    <td class="activity-award-operation">
+                                        <div class="activity-award-operation">
+                                            <a href="">编辑</a>
+                                            <a href="">删除</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-checkbox-td">
+                                        <div class="radio">
+                                            <label class="radio-custom ">
+                                                <input type="radio" name="header-first">
+                                                <i class="icon-circle-blank"></i>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td>中国移动积分换京券</td>
+                                    <td></td>
+                                    <td class="activity-award-operation">
+                                        <div class="activity-award-operation">
+                                            <a href="">编辑</a>
+                                            <a href="">删除</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </section>
                         <div class="btn-info-add-wrapper">
                             <a href="#" class="btn btn-white btn-primary-large1" data-target="#form-wizard" data-wizard="previous">上一步</a>
                             <a href="#" class="btn btn-primary btn-primary-large2" data-target="#form-wizard" data-wizard="next">下一步</a>
@@ -631,9 +690,15 @@
                     </div>
                 </div>
             </section>
+            <setion class="">
 
+            </setion>
         </section>
     </aside>
+</div>
+<div class="add-activity-panel">
+    <a href="javascript:closePanel()" class="btn btn-danger btn-circle"><i class="icon-remove"></i></a>
+    <iframe src="http://www.baidu.com" frameborder="0"></iframe>
 </div>
 <template id="addMoreTpl">
     <div class="form-group js-account">
@@ -802,6 +867,15 @@
                 console.log($(this).val())
             })
         })
+
+        /*新增页面浮层显示和隐藏*/
+        var $addActivityPanel = $('.add-activity-panel');
+        $('.js-show-panel').on('click', function(){
+            $addActivityPanel.show();
+        })
+        window.closePanel = function () {
+            $addActivityPanel.hide();
+        }
     })
 </script>
 </html>
